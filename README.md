@@ -1,1 +1,1 @@
-# Junseong-sdk.github.io
+The L Dynamics Corp.
