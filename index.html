@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <title>The L Dynamics</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            padding: 60px 20px; 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 60px 20px;
             background-color: #050505; /* 우주 느낌의 어두운 배경 */
             color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
+            flex: 1; /* 푸터를 하단에 고정하기 위한 설정 */
         }
-        .logo { 
+        .logo {
             width: 500px; /* 상단 로고/슬로건 크기 */
             height: auto;
             margin-bottom: 40px;
@@ -30,16 +35,50 @@
             margin-top: 20px;
         }
         h1 { font-weight: 300; letter-spacing: 2px; margin-top: 40px; }
+
+        /* 푸터 스타일 추가 */
+        footer {
+            margin-top: 80px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #888888;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+        footer a:hover {
+            color: #00ffff;
+            border-bottom-color: #00ffff;
+        }
+        .copyright {
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="catch_phrase.png" alt="The L Dynamics Logo" class="logo">
-        
         <br>
-
         <img src="orbital_refinery.png" alt="Orbital Refinery Module" class="refinery-img">
-        
     </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; <span id="year"></span> The L Dynamics. All rights reserved.
+        </div>
+        <div>
+            Contact: <a href="mailto:caitos@naver.com">caitos@naver.com</a>
+        </div>
+    </footer>
+
+    <script>
+        // 자동으로 현재 연도를 표시합니다.
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
